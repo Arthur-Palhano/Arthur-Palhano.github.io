@@ -136,10 +136,6 @@ header p {
   transition: all 0.2s;
 }
 
-#galeria img:hover {
-  filter: blur(1.5px);
-}
-
 #contato {
   display: flex;
   flex-direction: column;
