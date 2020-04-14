@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<style>
+    body {
+        background-color: #72CCCD;
+        padding: 0 13%;
+        color: aliceblue;
+        font: normal 20pt arial;
+        text-align: center;
+    }
+
+    #main {
+        background-color: white;
+        padding: 2%;
+        margin: 0 auto;
+        border-radius: 2px;
+    }
+
+    #main input{
+        text-align: center;
+        width: 50%;
+        font-size: 1pc;
+        padding: 5pt;
+        margin: 4pt;
+        border-radius: 16px;
+        border: 2px solid black;
+    }
+
+    #button {
+        background-image: linear-gradient(45deg, #fa709a, #fee140);
+    }
+
+    #res {
+        color: black;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Van't Hoff Calculator</title>
+</head>
+
+<h1>Van't Hoff Calc</h1>
+
+<body>
+    <div id="main">
+        <input type="text" id="mass" value="Massa da Questão"></br>
+        <input type="text" id="molarMass" value="Massa Molar"></br>
+        <input type="text" id="alpha" value="Grau de ionização"></br>
+        <input type="text" id="q" value="Mols de partículas liberadas"></br>
+        <input type="button" value="Calcular" id="button">
+        <div id="res">Resultado:</div>
+    </div>
+
+    <script>
+        var res = window.document.getElementById("res");
+        var button = window.document.getElementById("button");
+        var inputMass = window.document.getElementById('mass');
+        var inputMolarMass = window.document.getElementById('molarMass');
+        var inputAlpha = window.document.getElementById('alpha');
+        var inputQ = window.document.getElementById('q');
+
+        button.addEventListener('click', vh);
+        inputMass.addEventListener('click', effectMass);
+        inputMolarMass.addEventListener('click', effectMolarMass);
+        inputAlpha.addEventListener('click', effectAlpha);
+        inputQ.addEventListener('click', effectQ);
+
+        function effectMass() {
+            inputMass.value = "";
+        }
+
+        function effectMolarMass() {
+            inputMolarMass.value = "";
+        }
+
+        function effectAlpha() {
+            inputAlpha.value = "";
+        }
+
+        function effectQ() {
+            inputQ.value = "";
+        }
+
+        function vh() {
+            var m = Number(window.document.getElementById("mass").value);
+            var mM = Number(window.document.getElementById("molarMass").value);
+            var a = Number(window.document.getElementById("alpha").value);
+            a /= 100;
+            var q = Number(window.document.getElementById("q").value);
+            var nI = m / mM;
+            var i = 1 + a * (q - 1);
+            var nF = nI * i;
+            nF *= 6;
+            nF = nF.toFixed(1);
+            if (nF == 'NaN' || nF == 'Infinity' || nF == 'undefined') {
+                res.innerText = "Ops, algo deu errado, verifique os valores!"
+            } else {
+                res.innerText = `Resultado: ${nF}x10²³ partículas.`
+            }
+        }
+    </script>
+</body>
+
+</html>
