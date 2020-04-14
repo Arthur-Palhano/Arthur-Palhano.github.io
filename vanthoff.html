@@ -17,13 +17,13 @@
         border-radius: 2px;
     }
 
-    #main label{
+    #main label {
         color: black;
         font-size: 1.2pc;
         text-align: center;
     }
-    
-    #main input{
+
+    #main input {
         text-align: center;
         width: 50%;
         font-size: 1pc;
@@ -38,7 +38,8 @@
         background-image: linear-gradient(45deg, #fa709a, #fee140);
     }
 
-    #res {
+    #res,
+    #fator {
         color: black;
     }
 </style>
@@ -59,14 +60,16 @@
         <input type="text" id="molarMass" value="Massa Molar"></br>
         <label>(α)</label>
         <input type="text" id="alpha" value="Grau de ionização"></br>
-        <label>(Q)</label>
+        <label>(I)</label>
         <input type="text" id="q" value="Mols de partículas liberadas"></br>
         <input type="button" value="Calcular" id="button">
+        <div id="fator">I: </div>
         <div id="res">Resultado:</div>
     </div>
 
     <script>
         var res = window.document.getElementById("res");
+        var fator = window.document.getElementById("fator")
         var button = window.document.getElementById("button");
         var inputMass = window.document.getElementById('mass');
         var inputMolarMass = window.document.getElementById('molarMass');
@@ -109,7 +112,8 @@
             if (nF == 'NaN' || nF == 'Infinity' || nF == 'undefined') {
                 res.innerText = "Ops, algo deu errado, verifique os valores!"
             } else {
-                res.innerText = `Resultado: ${nF}x10²³ partículas.`
+                fator.innerText = `I: ${i}`;
+                res.innerText = `Resultado: ${nF}x10²³ partículas.`;
             }
         }
     </script>
