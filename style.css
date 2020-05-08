@@ -69,6 +69,7 @@ nav ul li a {
 
 header {
   background-image: url("https://picjumbo.com/wp-content/uploads/beautiful-nature-in-romanian-mountains_free_stock_photos_picjumbo_DSC00185-2210x1474.jpg");
+  line-height: 5em;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -78,6 +79,7 @@ header {
   align-items: center;
   text-align: center;
   padding: 3%;
+  padding-bottom: 14em;
 }
 
 header p {
