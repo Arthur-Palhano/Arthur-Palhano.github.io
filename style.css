@@ -1,209 +1,54 @@
-body {
-  font-family: Poppins, Helvetica, Arial, sans-serif;
-  color: #4d4d4d;
-  margin: 0;
+body{
+margin: .5%;
+background-color: rgb(22, 22, 22);
+color: rgb(233, 233, 233);
+font-family: 'Jost', sans-serif;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
-body img {
-  width: 100%;
-}
-
-h1,
-h2,
-h3 {
-  margin: 0;
-  font-family: roboto slab, Helvetica, Arial, sans-serif;
-  font-weight: 700;
-}
-
-.botao {
-  text-decoration: none;
-  color: aliceblue;
-  background-color: #4d4d4d;
-  padding: 1.5%;
-  border-radius: 5px;
-  font-size: 1em;
-}
-
-nav {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #4d4d4d;
-}
-
-nav > a {
-  text-decoration: none;
-  color: aliceblue;
-  font-weight: 700;
-  font-family: pacifico, Helvetica, Arial, sans-serif;
-  font-size: 28px;
-}
-
-nav ul {
-  list-style: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-nav ul li {
-  text-align: center;
-  width: 100%;
-}
-
-nav ul li a {
-  display: inline-block;
-  padding: 10px 0;
-  width: 100%;
-  text-decoration: none;
-  color: aliceblue;
-}
-
-header {
-  background-image: url("https://picjumbo.com/wp-content/uploads/beautiful-nature-in-romanian-mountains_free_stock_photos_picjumbo_DSC00185-2210x1474.jpg");
-  line-height: 5em;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  font-size: 2pc;
-  color: #0a0a0a;
-  align-items: center;
-  text-align: center;
-  padding: 3%;
-  padding-bottom: 14em;
-}
-
-header p {
-  margin-bottom: 2em;
-}
-
-#sobre {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 5%;
-  font-size: 1.2pc;
-  background-image: linear-gradient(to bottom right,#43cea2, #185a9d);
-  color: aliceblue;
-}
-
-#sobre p {
-  margin-bottom: 2.5em;
-  max-width: 1000px;
-}
-
-#servicos {
-  padding: 3%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-#servicos div {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  margin-top: 4%;
-}
-
-#servicos div img {
-  margin-bottom: 3%;
-  border-radius: 5px;
-}
-
-#galeria {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 3%;
-}
-
-#galeria h2 {
-  margin-bottom: 3%;
-}
-
-#galeria img {
-  width: 100%;
-  transition: all 0.2s;
-}
-
-#contato {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 3%;
-}
-
-#contato a {
-  color: #4d4d4d;
-  text-decoration: none;
-}
-
-@media screen and (min-width: 768px) {
-  nav {
-    flex-direction: row;
-    justify-content: space-around;
-  }
-
-  nav ul {
-    flex-direction: row;
-    width: 70%;
-  }
-
-  header {
-    height: 380px;
-    height: 38vh;
-    justify-content: center;
-  }
-
-  #sobre {
-    height: 30vh;
-    justify-content: center;
-  }
-
-  #servicos {
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    max-width: 1000px;
+.container {
     margin: 0 auto;
-  }
+    background-color: rgb(22, 22, 22);
+    padding: 1%;
+    width: 45%;
+    margin-top: 20vh;
+    border-left: double 1pc rgb(228, 220, 155);
+    border-bottom: double 1pc rgb(228, 220, 155);
+    border-top: solid 1pc rgb(228, 220, 155);
+    border-right: solid 1pc rgb(228, 220, 155);
+}
 
-  #servicos h2 {
+.screen {
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 95.5%;
+    height: 15vh;
+    background-color: rgb(22, 22, 22);
+}
+
+#score {
+    font-size: 1pc;
+    margin: 0;
+    text-align: left;
+    float: left;
+}
+
+#rgbCol {
+    line-height: 1px;
     text-align: center;
-    width: 100%;
-  }
+    font-size: 4pc;
+}
 
-  #servicos div {
-    flex-grow: 1;
-    width: 40%;
-    max-height: auto;
-    padding: 2%;
-    align-items: center;
-  }
-
-  #galeria {
+.opt {
+    margin-top: 10px;
     flex-direction: row;
-    flex-wrap: wrap;
-  }
+    display: flex;
+    margin-bottom: 10px;
+}
 
-  #galeria h2 {
-    width: 100%;
-    text-align: center;
-  }
-
-  #galeria img {
-    width: 33%;
-  }
+.box {
+    width: 30%;
+    margin: 0 auto;
+    height: 15vh;
+    border-radius: 0 100px 100px 100px;
 }
