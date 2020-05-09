@@ -52,6 +52,6 @@ function show() {
 var showCol = window.document.getElementById("rgbCol");
 
 var scoreBox = window.document.getElementById("score");
-var score = 20;
+var score = 0;
 
 show()
